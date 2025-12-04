@@ -1,0 +1,83 @@
+el amigo\the friend (male)
+el banco\the bank
+el baño\the bathroom
+el carro\the car
+el gato\the cat
+el hermano\the brother
+el libro\the book
+el muchacho\the boy
+el niño\the little boy
+el perro\the dog
+el teléfono\the telephone
+el vino\the wine
+el animal\the animal
+el café\the coffee
+el doctor\the doctor
+el hombre\the man
+el hospital\the hospital
+el hotel\the hotel
+el tomate\the tomato
+el tren\the train
+el clima\the climate
+el día\the day
+el drama\the drama
+el idioma\the language
+el mapa\the mapa
+el planeta\the planet
+el poema\the poem
+el problema\the problem
+el programa\the program
+el sistema\the system
+la amiga\the friend (female)
+la blusa\the blouse
+la bolsa\the bag
+la cama\the bed
+la casa\the house
+la cerveza\the beer
+la comida\the meal
+la hermana\the sister
+la iglesia\the church
+la lámpara\the lamp
+la mesa\the table
+la muchacha\the girl
+la niña\the little girl
+la persona\the person
+la planta\the plant
+la silla\the chair
+la tienda\the store
+la ventana\the window
+la canción\the song
+la conversacion\the conversation
+la invitacion\the invitation
+la leccion\the lesson
+la ilusion\the illusion
+la television\the television
+la ciudad\the city
+la verdad\the truth
+la amistad\the friendship
+la actitud\the attitude
+la foto\the photograph
+la mano\the hand
+la radio\the radio
+la clase\the class
+la flor\the flower
+la luz\the light
+la mujer\the woman
+la piel\the skin
+la suerte\the luck
+el artista\the artist (male)
+la artista\the artist (female)
+el dentista\the dentist (male)
+la dentista\the dentist (female)
+el pianista\the pianist (male)
+la pianista\the pianist (female)
+el taxista\the cabdriver (male)
+la taxista\the cabdriver (female)
+el cantante\the singer (male)
+la cantante\the singer (female)
+el estudiante\the student (male)
+la estudiante\the student (female)
+el gerente\the manager (male)
+la gerente\the manager (female)
+el presidente\the president (male)
+la presidente\the president (female)
