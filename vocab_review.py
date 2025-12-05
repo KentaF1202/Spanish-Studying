@@ -1,8 +1,14 @@
 import argparse
 import time
 import random
+from datetime import datetime
 
 MAX_CHAPTERS = 1
+
+def save_data(num_correct: int = 0, num_wrong: int = 0, time_limit: int = 60, correct: list = [], incorrect: list = []):
+    with open(f"save_data/{datetime.now().strftime('%Y-%m-%d')}.txt", "a", encoding="utf-8") as f:
+        f.write(f"{num_correct=}, {num_wrong=}, {time_limit=}, {incorrect=}, {correct=}\n")
+    return
 
 def load_questions(num_questions: int = 1) -> dict:
     words = {}
@@ -13,7 +19,7 @@ def load_questions(num_questions: int = 1) -> dict:
             raise ValueError(f"num_questions cannot exceed {MAX_CHAPTERS}")
         
         for i in range(1, num_questions+1):
-            with open(f"vocab/{i}.txt", "r", encoding="utf-8") as file:
+            with open(f"textbook_vocab/{i}.txt", "r", encoding="utf-8") as file:
                 for line in file:
                     line = line.strip()
                     if line:
@@ -39,6 +45,7 @@ def game(spanish: list, english: list, num_words: int, time_limit: int = 60, unl
     initial_time = time.time()
     num_correct = 0
     num_wrong = 0
+    correct = []
     incorrect = []
     if unlimited:
         time_limit = 3600  # 1 hour for unlimited mode
@@ -54,6 +61,7 @@ def game(spanish: list, english: list, num_words: int, time_limit: int = 60, unl
         elif answer == spanish[index]:
             print("Correct!\n")
             num_correct += 1
+            correct.append(spanish[index])
         else:
             print(f"Incorrect. The correct answer is '{spanish[index]}'.\n")
             incorrect.append(spanish[index])
@@ -64,6 +72,7 @@ def game(spanish: list, english: list, num_words: int, time_limit: int = 60, unl
     print("Your words you got wrong: ")
     for word in incorrect:
         print(word)
+    save_data(num_correct, num_wrong, time_limit, correct, incorrect)
 
 def main():
     # Take in command-line arguments
