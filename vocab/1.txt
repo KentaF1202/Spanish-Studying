@@ -2,12 +2,12 @@ el amigo\the friend (male)
 el banco\the bank
 el baño\the bathroom
 el carro\the car
-el gato\the cat
+el gato\the cat (male)
 el hermano\the brother
 el libro\the book
 el muchacho\the boy
 el niño\the little boy
-el perro\the dog
+el perro\the dog (male)
 el teléfono\the telephone
 el vino\the wine
 el animal\the animal
@@ -47,11 +47,11 @@ la silla\the chair
 la tienda\the store
 la ventana\the window
 la canción\the song
-la conversacion\the conversation
-la invitacion\the invitation
-la leccion\the lesson
-la ilusion\the illusion
-la television\the television
+la conversación\the conversation
+la invitación\the invitation
+la lección\the lesson
+la ilusión\the illusion
+la televisión\the television
 la ciudad\the city
 la verdad\the truth
 la amistad\the friendship
@@ -81,3 +81,62 @@ el gerente\the manager (male)
 la gerente\the manager (female)
 el presidente\the president (male)
 la presidente\the president (female)
+el espejo\the mirror
+el jardín\the garden
+el museo\the museum
+el sillón\the armchair
+el tiquete\the ticket
+la biblioteca\the library
+la idea\the idea
+la maleta\the suitcase
+la página\the page
+la pluma\the pen (starts with p)
+el barco\the boat
+blanco\white
+negro\black
+rojo\red
+simpático\nice
+hermoso\handsome (starts with h)
+amarillo\yellow
+anaranjado\orange
+azul\blue
+gris\gray
+marrón\brown-red (starts with m)
+pardo\brown-red (starts with p)
+café\brown
+morado\purple
+moreno\brown-skinned
+rosado\pink
+verde\green
+agradable\agreeable, pleasant
+alegre\happy (starts with a)
+barato\inexpensive
+caro\expensive
+débil\weak
+delgado\slender
+difícil\difficult
+estupendo\great, terrific (starts with e)
+excelente\excellent
+fácil\easy
+fántastico\fantastic
+feliz\happy (starts with f)
+feo\ugly
+flaco\thin
+frágil\fragile
+fuerte\strong
+gordo\fat
+grande\big
+guapo\handsome, beautiful (starts with g)
+horrible\horrible
+inteligente\intelligent
+interesante\interesting
+joven\young
+maravilloso\marvelous, wonderful
+pequeño\little, small
+pobre\poor
+rico\rich
+sincero\sincere
+tacaño\stingy
+típico\typical
+triste\sad
+viejo\old

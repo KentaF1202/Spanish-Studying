@@ -13,7 +13,7 @@ def load_questions(num_questions: int = 1) -> dict:
             raise ValueError(f"num_questions cannot exceed {MAX_CHAPTERS}")
         
         for i in range(1, num_questions+1):
-            with open(f"nouns/{i}.txt", "r", encoding="utf-8") as file:
+            with open(f"vocab/{i}.txt", "r", encoding="utf-8") as file:
                 for line in file:
                     line = line.strip()
                     if line:
@@ -22,10 +22,13 @@ def load_questions(num_questions: int = 1) -> dict:
     except ValueError as e:
         print(e)
         exit()
+    except FileNotFoundError:
+        print("One or more vocabulary files are missing.")
+        exit()
 
     return words
 
-def game(spanish: list, english: list, num_words: int, time_limit: int = 60):
+def game(spanish: list, english: list, num_words: int, time_limit: int = 60, unlimited: bool = False):
     # Welcome message
     print("Welcome to the Spanish Noun Review Game!")
     print("This game will help you practice Spanish nouns.")
@@ -37,6 +40,8 @@ def game(spanish: list, english: list, num_words: int, time_limit: int = 60):
     num_correct = 0
     num_wrong = 0
     incorrect = []
+    if unlimited:
+        time_limit = 3600  # 1 hour for unlimited mode
 
     # Game loop
     while ((time.time() - initial_time) < time_limit):
@@ -55,7 +60,7 @@ def game(spanish: list, english: list, num_words: int, time_limit: int = 60):
             num_wrong += 1
 
     print("\nTime's up!")
-    print(f"You got {num_correct} correct and {num_wrong} wrong.")
+    print(f"You got {num_correct} correct and {num_wrong} wrong in {time_limit} seconds.")
     print("Your words you got wrong: ")
     for word in incorrect:
         print(word)
@@ -73,7 +78,7 @@ def main():
     num_words = len(spanish)
 
     # Start the game
-    game(spanish, english, num_words, time_limit=30)
+    game(spanish, english, num_words, time_limit=60)
 
 if __name__ == "__main__":
     main()
