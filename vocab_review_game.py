@@ -12,50 +12,32 @@ def parse_arguments() -> argparse.Namespace:
     args = parser.parse_args()
     return args
 
-def create_player_stats_entry(chapter: int, english: str, spanish: str) -> None:
-    try:
-        with sqlite3.connect(DB_PATH) as conn:
-            cursor = conn.cursor()
-            cursor.execute("""
-                INSERT INTO player_stats (chapter, english, spanish, num_correct, num_wrong)
-                VALUES (?, ?, ?, 0, 0)
-            """, (chapter, english, spanish))
-            conn.commit()
-    except Exception as e:
-        print(f"Error creating player stats entry: {e}")
-        exit()
+def next_question(history_correct: list, history_incorrect: list) -> int:
+    num_words = len(history_correct)
+    weights = []
+    for i in range(num_words):
+        weight = (1 + history_incorrect[i]) / (1 + history_correct[i])
+        weights.append(weight)
+    selected_index = random.choices(range(num_words), weights=weights, k=1)[0]
+    print(f"{weights=}")
+    return selected_index
 
-def refresh_player_stats(words: dict, player_stats: dict, chapter: int) -> None:
-    any_new_words = False
-    for spanish, english in words.items():
-        found = False
-        for stats in player_stats.values():
-            if stats["chapter"] == 1 and stats["english"] == english and stats["spanish"] == spanish:
-                found = True
-                break
-        if not found:
-            create_player_stats_entry(1, english, spanish)
-            any_new_words = True
-
-    if any_new_words:
-        player_stats = load_player_stats(chapter)
-
-    return player_stats
-
-def game(player_stats: dict, time_limit: int = 60, unlimited: bool = False, english_mode: bool = False) -> dict:
+def game(word_data: dict, time_limit: int = 60, unlimited: bool = False, english_mode: bool = False) -> dict:
     # Prepare word lists
-    chapter = player_stats[1]["chapter"]
     spanish = []
     english = []
-    for stat in player_stats.values():
-        spanish.append(stat["spanish"])
-        english.append(stat["english"])
-        if stat["chapter"] != chapter:
-            chapter = "all"
-        
-    num_words = len(spanish)
+    history_correct = []
+    history_incorrect = []
+    chapter_of_words = []
+    for chapter in word_data.values():
+        for stat in chapter.values():
+            spanish.append(stat["spanish"])
+            english.append(stat["english"])
+            history_correct.append(stat["num_correct"])
+            history_incorrect.append(stat["num_wrong"])
+            chapter_of_words.append(stat["chapter"])
 
-    # Start the game
+    # Prepare per game stats
     initial_time = time.time()
     num_correct = 0
     num_wrong = 0
@@ -64,8 +46,9 @@ def game(player_stats: dict, time_limit: int = 60, unlimited: bool = False, engl
     if unlimited:
         time_limit = 3600  # 1 hour for unlimited mode
 
+    # Start game loop
     while ((time.time() - initial_time) < time_limit):
-        index = random.randint(0, num_words - 1)
+        index = next_question(history_correct, history_incorrect)
         if english_mode:
             print(f"What is the English translation of '{spanish[index]}'?")
             answer = input()
@@ -81,14 +64,16 @@ def game(player_stats: dict, time_limit: int = 60, unlimited: bool = False, engl
             print("Correct!\n")
             num_correct += 1
             correct.append(correct_answer)
-            update_player_stats_entry(player_stats[index]["chapter"], english[index], spanish[index], True)
+            update_player_stats_entry(chapter_of_words[index], english[index], spanish[index], True)
+            history_correct[index] += 1
         else:
             print(f"Incorrect. The correct answer is '{correct_answer}'.\n")
             incorrect.append(correct_answer)
             num_wrong += 1
-            update_player_stats_entry(player_stats[index]["chapter"], english[index], spanish[index], False)
+            update_player_stats_entry(chapter_of_words[index], english[index], spanish[index], False)
+            history_incorrect[index] += 1
 
-    # Game over
+    # Game over message and save data
     print("\nTime's up!")
     print(f"You got {num_correct} correct and {num_wrong} wrong in {time_limit} seconds.")
     print("Your words you got wrong: ")
@@ -96,19 +81,17 @@ def game(player_stats: dict, time_limit: int = 60, unlimited: bool = False, engl
         print(word)
     save_game_data(chapter, num_correct, num_wrong, time_limit, correct, incorrect)
 
-    return player_stats
-
 def main():
     # Get settings from command line arguments
     args = parse_arguments()
 
-    # Load words (english, spanish, num_correct, num_wrong) from player data and textbook files
-    word_data = load_word_data(args.chapter)
-
     # Game loops for multiple rounds if needed
     while True:
-        # Starts game and stores results
-        player_stats = game(word_data, time_limit=args.time_limit, unlimited=args.unlimited, english_mode=args.english)
+        # Load words (english, spanish, num_correct, num_wrong) from player data and textbook files
+        word_data = load_word_data(args.chapter)
+
+        # Starts game
+        game(word_data, time_limit=args.time_limit, unlimited=args.unlimited, english_mode=args.english)
 
         # Replay prompt
         print("Do you want to play again? (y/n)")
