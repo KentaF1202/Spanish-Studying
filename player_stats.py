@@ -149,7 +149,7 @@ def load_word_data(chapter: int = 0) -> dict:
     else:
         for spanish, english in textbook_words[chapter].items():
             found = False
-            for stats in player_stats.values():
+            for stats in player_stats[chapter].values():
                 if stats["chapter"] == chapter and stats["english"] == english and stats["spanish"] == spanish:
                     found = True
                     break
