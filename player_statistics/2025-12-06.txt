@@ -1,1 +1,0 @@
-time_limit=60, chapter=1, num_correct=11, num_wrong=0, incorrect=[], correct=['la amiga', 'joven', 'la tienda', 'feo', 'café', 'el niño', 'pobre', 'rico', 'estupendo', 'el mapa', 'la iglesia']

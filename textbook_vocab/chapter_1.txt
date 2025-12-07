@@ -22,7 +22,7 @@ el clima\the climate
 el día\the day
 el drama\the drama
 el idioma\the language
-el mapa\the mapa
+el mapa\the map
 el planeta\the planet
 el poema\the poem
 el problema\the problem
@@ -118,10 +118,10 @@ difícil\difficult
 estupendo\great, terrific (starts with e)
 excelente\excellent
 fácil\easy
-fántastico\fantastic
+fantástico\fantastic
 feliz\happy (starts with f)
 feo\ugly
-flaco\thin
+flaco\skinny
 frágil\fragile
 fuerte\strong
 gordo\fat
@@ -139,4 +139,4 @@ sincero\sincere
 tacaño\stingy
 típico\typical
 triste\sad
-viejo\old
+viejo\old (person)

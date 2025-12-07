@@ -1,0 +1,57 @@
+el árbol\the tree
+el piso\the floor
+el cuarto\the room
+el tigre\the tiger
+el zoológico\the zoo
+la estrella\the star
+el cielo\the sky
+la revista\the magazine
+la cucaracha\the cockroach
+el balcón\the balcony
+la pregunta\the question
+el alcalde\the mayor
+el menú\the menu
+qué\what
+la comunicación\the communication
+la filosofía\the philosophy
+la capital\the capital
+Perú\Peru
+cuál\which one
+cuáles\which ones
+la semana\the week
+por qué\why
+cuánto\how much
+cuándo\when
+el parque\the park
+la librería\the bookstore
+el país\the country
+el lunes\the Monday
+el martes\the Tuesday
+el miércoles\the Wednesday
+el jueves\the Thursday
+el viernes\the Friday
+el sábado\the Saturday
+el domingo\the Sunday
+acción de gracias\Thanksgiving Day
+enero\January
+febrero\February
+marzo\March
+abril\April
+mayo\May
+junio\June
+julio\July
+agosto\August
+septiembre\September
+octubre\October
+noviembre\November
+diciembre\December
+el mes\the month
+la estacion\the season
+el verano\the summer
+el otoño\the autumn, fall
+el invierno\the winter
+la primavera\the spring
+partes del día\parts of the day
+la mañana\the morning
+la tarde\the afternoon
+la noche\the night

@@ -1,0 +1,90 @@
+estar\to be (temporary)
+cómo\how
+dónde\where
+quién\who
+aquí\here (precise)
+acá\here (broad)
+allí\there (precise)
+allá\there (broad)
+alegre\happy (starts with a)
+bonito\pretty (starts with b)
+bueno\good
+cansado\tired
+contento\happy (starts with c)
+delicioso\delicious (starts with d)
+enfermo\sick
+enojado\angry
+feliz\happy (starts with f)
+guapo\beautiful, handsome (starts with g)
+hermoso\beautiful, handsome (starts with h)
+lindo\pretty (starts with l)
+sabroso\delicious (starts with s)
+ser\to be (permanent)
+la alcoba\the bedroom
+la alfombra\the rug
+el bolígrafo\the ballpoint pen (starts with b)
+la cocina\the kitchen
+la colección\the collection
+el comedor\the dining room
+la cortina\the curtain
+el cuaderno\the notebook
+el espejo\the mirror
+el estudio\the study
+la estufa\the stove
+el gabinete\the cabinet
+el horno\the oven
+el lápiz\the pencil
+la madera\the wood
+la navera\the refrigerator
+la pared\the wall
+el patio\the yard
+la sala\the living room
+el sillón\the easy chair
+el vestíbulo\the entryway
+el video\the video
+amplio\ample
+antiguo\old (objects)
+azul marino\navy blue
+cómodo\comfortable
+fino\fine, delicate
+grueso\thick
+limpio\clean
+privado\private
+sencillo\simple
+todo\all
+bastante\enough
+todavía\still
+el restaurante\the restaurant
+gracias\thanks
+el pescado\the fish (food)
+la sopa\the soup
+el arquitecto\the architect
+el maestro\the teacher (primary school) (male)
+el abogado\the lawyer
+el ingeniero\the engineer
+Nueva York\New York
+Italia\Italy
+Estados Unidos\United States
+español\spanish (language)
+cubano\cuban (people)
+católica\Catholic
+plástico\plastic
+el zapato\the shoe
+cuero\leather
+vidrio\glass
+piedra\stone
+la muñeca\the doll
+el club\the club
+la fiesta\the party
+el concierto\the concert
+la protesta\the protest
+el profesor\the professor (male)
+la puerta\the door
+el apartamento\the apartment
+el periódico\the newspaper
+el centro\the center
+el turista\the tourist
+el exterior\the exterior
+el patio\the patio
+el disco compacto\the compact disk
+el piano\the piano
