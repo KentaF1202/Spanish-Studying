@@ -1,0 +1,1 @@
+time_limit=60, chapter=1, num_correct=12, num_wrong=5, incorrect=['el planeta', 'la maleta', 'fácil', 'la ilusión', 'marrón'], correct=['el drama', 'la presidente', 'la ciudad', 'la luz', 'el dentista', 'la planta', 'fácil', 'la planta', 'el clima', 'feliz', 'el barco', 'agradable']
