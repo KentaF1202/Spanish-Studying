@@ -9,19 +9,22 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument("-u", "--unlimited", action="store_true", help="Endless mode (no time limit)", default=False)
     parser.add_argument("-t", "--time_limit", metavar="", help="Amount of time per game (in seconds)", type=int, default=60)
     parser.add_argument("-e", "--english", action="store_true", help="Quiz reading spanish words instead of writing them", default=False)
+    parser.add_argument("-w", "--weights", action="store_true", help="Show weights for each word", default=False)
     args = parser.parse_args()
     return args
 
-def next_question(history_correct: list, history_incorrect: list) -> int:
+def next_question(history_correct: list, history_incorrect: list, show_weights: bool) -> int:
     num_words = len(history_correct)
     weights = []
     for i in range(num_words):
         weight = (1 + history_incorrect[i]) / (1 + history_correct[i])
         weights.append(weight)
     selected_index = random.choices(range(num_words), weights=weights, k=1)[0]
+    if show_weights:
+        print(f"Weights: {weights}")
     return selected_index
 
-def game(word_data: dict, time_limit: int = 60, unlimited: bool = False, english_mode: bool = False) -> dict:
+def game(word_data: dict, time_limit: int = 60, unlimited: bool = False, english_mode: bool = False, show_weights: bool = False) -> dict:
     # Prepare word lists
     spanish = []
     english = []
@@ -47,7 +50,7 @@ def game(word_data: dict, time_limit: int = 60, unlimited: bool = False, english
 
     # Start game loop
     while ((time.time() - initial_time) < time_limit):
-        index = next_question(history_correct, history_incorrect)
+        index = next_question(history_correct, history_incorrect, show_weights)
         if english_mode:
             print(f"What is the English translation of '{spanish[index]}'?")
             answer = input()
@@ -96,7 +99,7 @@ def main():
         word_data = load_word_data(args.chapter)
 
         # Starts game
-        game(word_data, time_limit=args.time_limit, unlimited=args.unlimited, english_mode=args.english)
+        game(word_data, time_limit=args.time_limit, unlimited=args.unlimited, english_mode=args.english, show_weights=args.weights)
 
         # Replay prompt
         print("Do you want to play again? (y/n)")
