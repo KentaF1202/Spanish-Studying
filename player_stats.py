@@ -3,11 +3,10 @@ import os
 from pathlib import Path
 import sqlite3
 
-ROOT_DIR_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEXTBOOK_VOCAB_PATH = os.path.join(ROOT_DIR_PATH, "textbook_vocab")
-DB_PATH = "kenta_vocab_stats.db"
-path_obj = Path(TEXTBOOK_VOCAB_PATH)
-max_chapters = sum(1 for p in path_obj.iterdir() if p.is_file())
+TEXTBOOK_VOCAB_PATH = "textbook_vocab"
+PLAYER_STATISTICS_PATH = "player_statistics"
+DB_PATH = os.path.join(PLAYER_STATISTICS_PATH, "kenta_vocab_stats.db")
+MAX_CHAPTERS = sum(1 for p in Path(TEXTBOOK_VOCAB_PATH).iterdir() if p.is_file())
 
 # Helper function to load words from a textbook_vocab chapter file
 # Retunrs a dictionary of spanish: english pairs for the given chapter
@@ -33,14 +32,14 @@ def load_textbook_words(chapter: int = 0) -> dict:
         # Also check if chapter is within valid range
         if chapter == 0:
             all_chapters = True
-        elif chapter > 0 and chapter <= max_chapters:
+        elif chapter > 0 and chapter <= MAX_CHAPTERS:
             pass
         else:
-            raise Exception(f"Chapter number must be between 0 and {max_chapters}.")
+            raise Exception(f"Chapter number must be between 0 and {MAX_CHAPTERS}.")
         
         # Load words from specified chapters into list of dictionaries
         if all_chapters:
-            for i in range(1, max_chapters + 1):
+            for i in range(1, MAX_CHAPTERS + 1):
                 textbook_words[i] = add_chapter_to_words(i)
         else:
             textbook_words[chapter] = add_chapter_to_words(chapter)
@@ -82,7 +81,7 @@ def load_player_stats(chapter: int) -> dict:
         with sqlite3.connect(DB_PATH) as conn:
             cursor = conn.cursor()
             if chapter == 0:
-                for i in range(1, max_chapters + 1):
+                for i in range(1, MAX_CHAPTERS + 1):
                     cursor.execute("SELECT * FROM player_stats WHERE chapter=?", (i,))
                     rows = cursor.fetchall()
                     player_stats[i] = {}
@@ -136,7 +135,7 @@ def load_word_data(chapter: int = 0) -> dict:
     # For each chapter in the textbook words, check if each word exists in player stats
     # If not, create a new entry in player stats
     if chapter == 0:
-        for i in range(1, max_chapters + 1):
+        for i in range(1, MAX_CHAPTERS + 1):
             for spanish, english in textbook_words[i].items():
                 found = False
                 for stats in player_stats[i].values():
@@ -164,7 +163,7 @@ def load_word_data(chapter: int = 0) -> dict:
 
 def save_game_data(chapter: str = 0, num_correct: int = 0, num_wrong: int = 0, time_limit: int = 60, correct: list = [], incorrect: list = []) -> None:
     try:
-        save_file = f"{datetime.now().strftime('%Y-%m-%d')}.txt"
+        save_file = os.path.join("player_statistics", f"{datetime.now().strftime('%Y-%m-%d')}.txt")
         with open(save_file, "a", encoding="utf-8") as f:
             f.write(f"{time_limit=}, {chapter=}, {num_correct=}, {num_wrong=}, {incorrect=}, {correct=}\n")
        

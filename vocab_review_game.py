@@ -1,7 +1,7 @@
 import argparse
 import time
 import random
-from player_statistics.player_stats import load_word_data, save_game_data, update_player_stats_entry
+from player_stats import load_word_data, save_game_data, update_player_stats_entry
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser("Spanish Vocab Review Game")
@@ -19,7 +19,6 @@ def next_question(history_correct: list, history_incorrect: list) -> int:
         weight = (1 + history_incorrect[i]) / (1 + history_correct[i])
         weights.append(weight)
     selected_index = random.choices(range(num_words), weights=weights, k=1)[0]
-    print(f"{weights=}")
     return selected_index
 
 def game(word_data: dict, time_limit: int = 60, unlimited: bool = False, english_mode: bool = False) -> dict:
@@ -73,12 +72,18 @@ def game(word_data: dict, time_limit: int = 60, unlimited: bool = False, english
             update_player_stats_entry(chapter_of_words[index], english[index], spanish[index], False)
             history_incorrect[index] += 1
 
-    # Game over message and save data
+    # Game over message and stats
     print("\nTime's up!")
     print(f"You got {num_correct} correct and {num_wrong} wrong in {time_limit} seconds.")
     print("Your words you got wrong: ")
     for word in incorrect:
         print(word)
+    
+    # Determines chapter for saving
+    if sum(chapter_of_words)/len(chapter_of_words) % 1 == 0:
+        chapter = chapter_of_words[0]
+    else:
+        chapter = 0
     save_game_data(chapter, num_correct, num_wrong, time_limit, correct, incorrect)
 
 def main():
