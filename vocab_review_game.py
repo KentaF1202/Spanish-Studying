@@ -60,9 +60,9 @@ def game(word_data: dict, time_limit: int = 60, unlimited: bool = False, english
             answer = input()
             correct_answer = spanish[index]
 
-        if answer.lower() == "exit" or answer.lower() == "q":
+        if answer.lower() == "exit" or answer.lower() == "q" or answer.lower() == "quit":
             break
-        elif answer == correct_answer:
+        elif answer.lower() == correct_answer.lower():
             print("Correct!\n")
             num_correct += 1
             correct.append(correct_answer)

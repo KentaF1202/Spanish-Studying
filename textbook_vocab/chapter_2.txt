@@ -34,8 +34,8 @@ la estufa\the stove
 el gabinete\the cabinet
 el horno\the oven
 el lápiz\the pencil
-la madera\the wood
-la navera\the refrigerator
+madera\wood
+la nevera\the refrigerator
 la pared\the wall
 el patio\the yard
 la sala\the living room
@@ -67,7 +67,7 @@ Italia\Italy
 Estados Unidos\United States
 español\spanish (language)
 cubano\cuban (people)
-católica\Catholic
+católica\catholic
 plástico\plastic
 el zapato\the shoe
 cuero\leather
