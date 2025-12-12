@@ -20,7 +20,7 @@ hermoso\beautiful, handsome (starts with h)
 lindo\pretty (starts with l)
 sabroso\delicious (starts with s)
 ser\to be (permanent)
-la alcoba\the bedroom
+la alcoba\the bedroom (formal)
 la alfombra\the rug
 el bolígrafo\the ballpoint pen (starts with b)
 la cocina\the kitchen

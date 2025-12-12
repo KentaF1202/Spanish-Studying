@@ -1,0 +1,140 @@
+cero\zero
+uno\one
+dos\two
+tres\three
+cuatro\four
+cinco\five
+seis\six
+siete\seven
+ocho\eight
+nueve\nine
+diez\ten
+once\eleven
+doce\twelve
+trece\thirteen
+catorce\fourteen
+quince\fifteen
+dieciséis\sixteen
+diecisiete\seventeen
+dieciocho\eighteen
+diecinueve\nineteen
+veinte\twenty
+veintiuno\twenty one
+veintidós\twenty two
+veintitrés\twenty three
+veinticuatro\twenty four
+veinticinco\twenty five
+veintiséis\twenty six
+veintisiete\twenty seven
+veintiocho\twenty eight
+veintinueve\twenty nine
+treinta\thirty
+treinta y uno\thirty one
+treinta y dos\thirty two
+treinta y tres\thirty three
+treinta y cuatro\thirty four
+treinta y cinco\thirty five
+treinta y seis\thirty six
+treinta y siete\thirty seven
+treinta y ocho\thirty eight
+treinta y nueve\thirty nine
+cuarenta\forty
+cincuenta\fifty
+sesenta\sixty
+setenta\seventy
+ochenta\eighty
+noventa\ninety
+cien\one hundred
+doscientos\two hundred
+trescientos\three hundred
+cuatrocientos\four hundred
+quinientos\five hundred
+seiscientos\six hundred
+setecientos\seven hundred
+ochocientos\eight hundred
+novecientos\nine hundred
+mil\thousand
+primero\first
+segundo\second
+tercero\third
+cuarto\fourth
+quinto\fifth
+sexto\sixth
+séptimo\seventh
+octavo\eighth
+noveno\ninth
+décimo\tenth
+el siglo\the century
+el primero del mes\the first of the month
+extactamente\exactly
+en punto\exact (time)
+cuarto\quarter (of an hour)
+media\half (of an hour)
+lleno\full
+el ambiente\the atmosphere
+el día de fiesta\the holiday
+la bebida\the drink
+el pollo\the chicken
+la carne\the meat
+la papa\the potato
+el vegetale\the vegetable (formal)
+la verdura\the vegetable (informal)
+el postre\the dessert
+la ensalada\the salad
+el agua\the water
+el almuerzo\the lunch
+el camarero\the waiter (only in Spain)
+la carta\the menu (formal)
+la cena\the supper
+el cheque\the paper check
+la cuchara\the spoon
+el cuchillo\the knife
+el desayuno\the breakfast
+el impuesto\the tax
+el mantel\the tablecloth
+el mozo\the waiter (in South America)
+el plato\the plate
+la propina\the tip
+la servilleta\the napkin
+la tarjeta de crédito\the credit card
+el tenedor\the fork
+el vaso\the glass
+el águila\the eagle
+el alma\the soul
+el arma\the weapon
+el hacha\the axe
+caliente\warm, hot
+fresco\fresh
+frío\cold
+limpio\clean
+picante\spicy
+sano\healthy
+seco\dry
+sucio\dirty
+vacío\empty
+mediodía\midday
+medianoche\midnight
+temprano\early
+tarde\late
+una vez\one time
+doble\double
+dos veces\two times
+triple\triple
+tres veces\three times
+la mitad\half
+la almohada\the pillow
+la aspiradora\the vacuum cleaner
+el desorden\the mess
+el dormitorio\the bedroom
+la escoba\the broom
+la esponja\the sponge
+el helado\the ice cream
+el lavaplatos\the dishwasher
+la mancha\the stain
+el oficio\the work, the job
+el polve\the dust
+la ropa\the clothes
+la sábana\the sheet
+al principio\at the beginning
+es otro cuento\its another story
+por lo menos\at least
