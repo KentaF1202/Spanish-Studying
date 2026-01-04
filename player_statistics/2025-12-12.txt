@@ -1,0 +1,3 @@
+time_limit=60, chapter=3, num_correct=9, num_wrong=3, incorrect=['la comunicación', 'la comunicación', 'el otoño'], correct=['agosto', 'la comunicación', 'amistoso', 'ancho', 'raro', 'corto', 'nuevo', 'la palabra', 'flojo']
+time_limit=60, chapter=3, num_correct=6, num_wrong=5, incorrect=['por qué', 'la llave', 'el ascensor', 'el verano', 'elegante'], correct=['el país', 'la música', 'la salida', 'el precio', 'porque', 'el sitio']
+time_limit=60, chapter=3, num_correct=7, num_wrong=4, incorrect=['el sábado', 'la habitación', 'peligroso', 'el arqueologo'], correct=['la música', 'la llave', 'el tigre', 'septiembre', 'serio', 'elegante', 'el martes']

@@ -32,7 +32,7 @@ el jueves\the Thursday
 el viernes\the Friday
 el sábado\the Saturday
 el domingo\the Sunday
-acción de gracias\Thanksgiving Day
+acción de gracias\Thanksgiving
 enero\January
 febrero\February
 marzo\March

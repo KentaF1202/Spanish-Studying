@@ -1,0 +1,2 @@
+time_limit=60, chapter=1, num_correct=14, num_wrong=1, incorrect=['la idea'], correct=['el taxista', 'la verdad', 'caro', 'el idioma', 'anaranjado', 'fantástico', 'el doctor', 'la cantante', 'verde', 'la dentista', 'triste', 'el tren', 'la clase', 'la iglesia']
+time_limit=60, chapter=1, num_correct=19, num_wrong=1, incorrect=['el mapa'], correct=['horrible', 'el gato', 'gris', 'el muchacho', 'viejo', 'la cantante', 'inteligente', 'la cerveza', 'difícil', 'el artista', 'el perro', 'la ciudad', 'la mujer', 'la piel', 'pardo', 'la página', 'la flor', 'la clase', 'maravilloso']

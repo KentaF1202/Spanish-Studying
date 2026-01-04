@@ -89,6 +89,9 @@ def display_barplot(words: list):
         
         # Blocks execution until the window is closed
         print(f"Displaying plot for words {start_num} to {end_num}. Close window to see next batch...")
+
+        mngr = plt.get_current_fig_manager()
+        mngr.window.wm_geometry("+12+25")
         plt.show()
 
 if __name__ == "__main__":
