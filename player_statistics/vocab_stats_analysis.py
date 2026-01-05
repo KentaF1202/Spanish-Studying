@@ -70,8 +70,8 @@ def display_barplot(words: list):
         fig, ax = plt.subplots(figsize=(15, 6))
 
         # List comprehensions for bar positioning
-        rects1 = ax.bar([x - width/2 for x in x_indices], y_values_1, width, label='Correct', color='#4e79a7')
-        rects2 = ax.bar([x + width/2 for x in x_indices], y_values_2, width, label='Incorrect', color='#f28e2b')
+        rects1 = ax.bar([x - width/2 for x in x_indices], y_values_1, width, label='Correct', color="#09ce16")
+        rects2 = ax.bar([x + width/2 for x in x_indices], y_values_2, width, label='Incorrect', color="#c51d1d")
 
         ax.set_ylabel('Counts')
         
